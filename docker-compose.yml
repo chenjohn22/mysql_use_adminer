@@ -1,0 +1,30 @@
+mysql:
+      image: mysql:5.7.17
+      container_name: mysql
+      restart: always
+      ports:
+          - "13306:3306"
+      volumes:
+          - ./data:/var/lib/mysql
+      environment:
+        MYSQL_ROOT_PASSWORD: 12345678
+adminer:
+      image: adminer
+      container_name: adminer
+      links:
+          - mysql:db
+      restart: always
+      ports:
+          - "8099:8080"
+#phpmyadmin:
+##  image: phpmyadmin/phpmyadmin:4.6
+##  container_name: phpmyadmin
+##  links:
+##    - mysql:db
+#  #environment:
+#    # - PMA_ARBITRARY=1
+#    #  restart: always
+#    #  ports:
+#    #    - "8080:80"
+#      # volumes:
+#        # - /sessions
