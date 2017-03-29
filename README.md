@@ -8,4 +8,7 @@ database    : db
 user        : root
 password    : 12345678
 
+使用command line 登入mysql 
+docker exec -it mysql bash
+
 #made by James
