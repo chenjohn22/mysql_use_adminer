@@ -7,9 +7,9 @@ docker-compose up -d
 
 adminer 存取帳密
 -----------------------
-database    : db
-user        : root
-password    : 12345678
+database    : db  
+user        : root  
+password    : 12345678  
 
 使用command line 登入mysql 
 ----------------------
